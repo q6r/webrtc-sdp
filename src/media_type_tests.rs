@@ -305,11 +305,6 @@ fn test_media_invalid_transport() {
 }
 
 #[test]
-fn test_media_invalid_payload() {
-    assert!(parse_media("audio 9 UDP/TLS/RTP/SAVPF 300").is_err());
-}
-
-#[test]
 fn test_media_vector_first_line_failure() {
     let mut sdp_lines: Vec<SdpLine> = Vec::new();
     let line = SdpLine {
